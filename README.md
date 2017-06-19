@@ -15,4 +15,4 @@ The tests run on TravisCI.
 
 You can inspect the '.travis.yml' script to see how this works.
 
-To run the tests locally on your machine, you have to use Gradle.
+ you have to use Gradle to run the tests locally on your machine.
