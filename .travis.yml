@@ -2,6 +2,10 @@ language: android
 jdk: oraclejdk8
 sudo: false
 
+notifications:  #Optional
+    email:
+    - javierbrk@gmail.com
+    
 android:
   components:
     - platform-tools
@@ -21,6 +25,10 @@ before_script:
 
 script: ./gradlew connectedAndroidTest
 
-notifications:  #Optional
-    email:
-    - javierbrk@gmail.com
+before_install:
+  - pip install --user codecov    #Install codecov
+
+after_success:
+  - codecov                       #Run codecov
+
+
